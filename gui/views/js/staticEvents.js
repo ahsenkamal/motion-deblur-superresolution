@@ -1,4 +1,4 @@
-const iutLocationSearch = async (event) => {
+const iutLocationSearchButtonClicked = async (event) => {
   const iutLocationNode = document.getElementById('iut-location');
   const value = await askForFile();
   if (value != null) {
@@ -6,23 +6,16 @@ const iutLocationSearch = async (event) => {
   }
 }
 
-const generateVerilog = async (event) => {
-  const projectLocation = document.getElementById('project-location').value;
-  if (!projectLocation) {
-    alert('Please provide project location');
-    return;
-  }
+const motionDeblurButtonClicked = async (event) => {
+  window.location = "motion_deblur.html";
+}
 
-  const N = document.getElementById('n-bits').value;
-  if (!N) {
-    alert('Please provide the size of the adder');
-    return;
-  }
-
-  eel.generateVerilog(projectLocation, currentAdder, Number.parseInt(N));
+const superResButtonClicked = async (event) => {
+  window.location = "super_resolution.html";
 }
 
 const setupEvents = () => {
-  document.getElementById('iut-location-search').addEventListener('click', iutLocationSearch);
-  document.getElementById('generate-button').addEventListener('click', generateVerilog);
+  document.getElementById('iut-location-search').addEventListener('click', iutLocationSearchButtonClicked);
+  document.getElementById('motion-deblur-button').addEventListener('click', motionDeblurButtonClicked);
+  document.getElementById('super-res-button').addEventListener('click', superResButtonClicked);
 }
