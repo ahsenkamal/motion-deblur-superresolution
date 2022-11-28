@@ -75,4 +75,4 @@ def motion_deblur(img, ang, d, SNR_dB):
     res_rgb = np.roll(res_rgb, -kh//2, 0)
     res_rgb = np.roll(res_rgb, -kw//2, 1)
 
-    return np.uint8(psf_to_ret * 255.0), np.uint8(res_rgb * 255.0)
+    return psf_to_ret * 255, res_rgb * 255
