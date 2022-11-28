@@ -26,6 +26,8 @@ def defocus_kernel(d, sz=65):
     return kern
 
 def motion_deblur(img, ang, d, SNR_dB):
+    ang = np.deg2rad(ang)
+
     img_r = img[..., 0]
     img_g = img[..., 1]
     img_b = img[..., 2]
