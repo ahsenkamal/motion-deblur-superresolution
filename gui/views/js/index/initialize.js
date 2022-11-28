@@ -2,8 +2,6 @@ let adderNames;
 let currentAdder;
 
 window.addEventListener("load", async () => {
-  await eel.initialize()();
-
   setupEvents();
 
   // If the server stops, close the UI

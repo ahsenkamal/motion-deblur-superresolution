@@ -25,5 +25,18 @@
 			<img id="out" alt="Recovered Image">
 			<img id="psf" alt="Point Spread Function">
         </div>
+
+		<div class="controls-pane">
+			<div class="sliders-container"></div>
+				<p>Angle: <span id="angle-slider-display">135</span></p>
+				<input type="range" min="0" max="180" value="135" id="angle-slider" class="slider">
+
+				<p>Strength: <span id="strength-slider-display">22</span></p>
+				<input type="range" min="0" max="100" value="22" id="strength-slider" class="slider">
+
+				<p>SNR (dB): <span id="snr-slider-display">25</span></p>
+				<input type="range" min="0" max="50" value="25" id="snr-slider" class="slider">
+			</div>
+		</div>
 	</body>
 </html>

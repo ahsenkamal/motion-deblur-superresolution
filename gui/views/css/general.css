@@ -127,3 +127,11 @@ button.large {
     grid-gap: 4px;
     grid-template-columns: 1fr 120px;
 }
+
+.sliders-container {
+    width: 100%;
+}
+
+.slider:hover {
+    opacity: 1;
+}
