@@ -1,7 +1,8 @@
 import os, sys, re
 import platform
 
-import base64, io
+import cv2
+import base64
 
 def open_output_folder(folder):
   folder_directory = os.path.abspath(folder)
@@ -16,7 +17,6 @@ def open_output_folder(folder):
   return True
 
 def image_to_base64(image):
-  buffered = io.BytesIO()
-  image.save(buffered, format="PNG")
-  img_base64_str = "data:image/png;base64," + base64.b64encode(buffered.getvalue()).decode()
+  retval, image_buffer = cv2.imencode('.png', image)
+  img_base64_str = "data:image/png;base64," + base64.b64encode(image_buffer).decode()
   return img_base64_str

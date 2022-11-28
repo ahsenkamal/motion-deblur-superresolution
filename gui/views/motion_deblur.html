@@ -12,23 +12,18 @@
 	</head>
 
 	<body>
-        <div class="mid">
-            <div id="header">
-                <div class="title">
-                    <a href="https://github.com/ahsenkamal/motion-deblur-superresolution" target="_blank"><h1>Motion De-Blur</h1></a>
-                </div>
-            </div>
-
-            <div>
-				<div class="filepath-browse-layout">
-					<input id="iut-location" placeholder="Choose an image to motion de-blur ...">
-					<button id="iut-location-search">Browse</button>
-				</div>
+		Motion De-Blur
+		<div>
+			<div class="filepath-browse-layout">
+				<input id="iut-location" placeholder="Choose an image to motion de-blur ...">
+				<button id="iut-location-search">Browse</button>
 			</div>
+		</div>
 
-            <div>
-                <img id="iut" alt="IUT (Image Under Test)">
-            </div>
+        <div>
+            <img id="iut" alt="IUT (Image Under Test)">
+			<img id="out" alt="Recovered Image">
+			<img id="psf" alt="Point Spread Function">
         </div>
 	</body>
 </html>
