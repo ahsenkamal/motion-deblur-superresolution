@@ -36,6 +36,13 @@
             flex: 0 0 33%;
   }
 
+  .image-column {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
   #sliders-wrapper {
       width: 100%;
   }
