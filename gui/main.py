@@ -6,27 +6,22 @@ import utils
 
 import motion_deblur
 
-image_cache = {}
+IUT = None # Image Under Test
 
 eel.init('views')
-
-@eel.expose
-def initialize():
-  print('inited')
-  return []
 
 @eel.expose
 def ask_file():
   return dialogs.ask_file()
 
 @eel.expose
-def do_motion_deblur(image_path, angle, strength, snr, iut_already_displayed):
-  image = None
-  if image_path in image_cache:
-    image = image_cache[image_path]
-  else:
-    image = cv2.imread(image_path)
-    image_cache[image_path] = image
+def submit_iut_path(image_path):
+  global IUT
+  IUT = cv2.imread(image_path)
+
+@eel.expose
+def do_motion_deblur(angle, strength, snr, iut_already_displayed):
+  image = IUT
 
   if not iut_already_displayed:
     img_base64_str = utils.image_to_base64(image)
