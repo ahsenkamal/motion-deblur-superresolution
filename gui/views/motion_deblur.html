@@ -3,14 +3,31 @@
 	<head>
 		<title>Pumped</title>
 		<script type="text/javascript" src="/eel.js"></script>
+        <script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript" src="/js/motion-deblur/messages.js"></script>
+		<script type="text/javascript" src="/js/motion-deblur/staticEvents.js"></script>
+		<script type="text/javascript" src="/js/motion-deblur/initialize.js"></script>
 		<link rel="stylesheet" href="/css/general.css">
 		<link rel="stylesheet" href="/css/main.css">
 	</head>
 
 	<body>
-		<div id="header">
-            <div class="title">
-				<a href="https://github.com/ahsenkamal/motion-deblur-superresolution" target="_blank"><h1>Motion De-Blur</h1></a>
+        <div class="mid">
+            <div id="header">
+                <div class="title">
+                    <a href="https://github.com/ahsenkamal/motion-deblur-superresolution" target="_blank"><h1>Motion De-Blur</h1></a>
+                </div>
+            </div>
+
+            <div>
+				<div class="filepath-browse-layout">
+					<input id="iut-location" placeholder="Choose an image to motion de-blur ...">
+					<button id="iut-location-search">Browse</button>
+				</div>
+			</div>
+
+            <div>
+                <img id="iut" alt="IUT (Image Under Test)">
             </div>
         </div>
 	</body>
