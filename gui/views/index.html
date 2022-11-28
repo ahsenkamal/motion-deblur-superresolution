@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tree Adder Generator</title>
+		<script type="text/javascript" src="/eel.js"></script>
+		<script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript" src="/js/messages.js"></script>
+		<script type="text/javascript" src="/js/interface.js"></script>
+		<script type="text/javascript" src="/js/staticEvents.js"></script>
+		<script type="text/javascript" src="/js/initialize.js"></script>
+		<link rel="stylesheet" href="/css/general.css">
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+
+	<body>
+		<div class="mid">
+			<div id="header">
+				<div class="title">
+					<a href="https://github.com/ahsenkamal/motion-deblur-superresolution" target="_blank"><img src="/favicon.ico" /></a>
+					<a href="https://github.com/ahsenkamal/motion-deblur-superresolution" target="_blank"><h1>Pumped</h1></a>
+				</div>
+				<div class="extra-links">
+					<a href="https://github.com/ahsenkamal/motion-deblur-superresolution" target="_blank">
+						GitHub
+						<img src="https://github.githubassets.com/favicons/favicon.png" alt="GitHub favicon" />
+					</a>
+				</div>
+			</div>
+
+			<div>
+				<div class="filepath-browse-layout">
+					<input id="iut-location" placeholder="Choose an image ...">
+					<button id="iut-location-search">Browse</button>
+				</div>
+			</div>
+
+
+			<div id="output">
+				<h2 >Output</h2>
+				<textarea readonly></textarea>
+			</div>
+
+			<br>
+
+			<div id="motion-deblur-button-wrapper" class="action-button-wrapper">
+				<button id="motion-deblur-button" class="action-button">
+					MOTION DE-BLUR
+				</button>
+			</div>
+
+			<div id="super-res-button-wrapper" class="action-button-wrapper">
+				<button id="super-res-button" class="action-button">
+					SUPER RESOLUTION
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
