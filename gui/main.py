@@ -15,6 +15,14 @@ def ask_file():
   return dialogs.ask_file()
 
 @eel.expose
+def ask_and_save_image(image_base64_str):
+  save_file_name = dialogs.ask_save_as_image_file()
+  print(save_file_name)
+  image = utils.base64_to_image(image_base64_str)
+  if save_file_name:
+    cv2.imwrite(save_file_name, image)
+
+@eel.expose
 def submit_iut_path(image_path):
   global IUT
   IUT = cv2.imread(image_path)

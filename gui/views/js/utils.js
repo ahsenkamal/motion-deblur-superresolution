@@ -2,6 +2,10 @@ const askForFile = async () => {
   return await eel.ask_file()();
 };
 
+const askAndSaveImage = async (imageBase64Str) => {
+  return await eel.ask_and_save_image(imageBase64Str)();
+}
+
 const submitIUTPath = async (image_path) => {
   return await eel.submit_iut_path(image_path)();
 }

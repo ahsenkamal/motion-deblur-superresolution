@@ -21,8 +21,13 @@ const snrSliderInput = async (event) => {
   slidersChanged();
 }
 
+const saveButtonClicked = async (event) => {
+  askAndSaveImage(document.getElementById('out').src);
+}
+
 const setupEvents = () => {
   document.getElementById('angle-slider').addEventListener('input', angleSliderInput);
   document.getElementById('strength-slider').addEventListener('input', strengthSliderInput);
   document.getElementById('snr-slider').addEventListener('input', snrSliderInput);
+  document.getElementById('save-button').addEventListener('click', saveButtonClicked);
 }

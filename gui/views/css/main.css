@@ -124,3 +124,28 @@
     cursor: not-allowed;
 }
 
+.control-button {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    font-size: 15px;
+    color: white;
+    height: 38px;
+    padding: 0 30px;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover {
+    background-color: var(--primary-darker);
+}
+
+.control-button:disabled {
+    background-color: var(--disabled);
+    border-color: var(--disabled);
+    cursor: not-allowed;
+}
+
