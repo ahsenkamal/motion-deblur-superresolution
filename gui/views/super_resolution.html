@@ -3,15 +3,33 @@
 	<head>
 		<title>Pumped</title>
 		<script type="text/javascript" src="/eel.js"></script>
-		<link rel="stylesheet" href="/css/general.css">
-		<link rel="stylesheet" href="/css/main.css">
+        <script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript" src="/js/super-resolution/messages.js"></script>
+		<script type="text/javascript" src="/js/super-resolution/staticEvents.js"></script>
+		<script type="text/javascript" src="/js/super-resolution/initialize.js"></script>
+		<link rel="stylesheet" href="/css/super_resolution.css">
 	</head>
 
 	<body>
-		<div id="header">
-            <div class="title">
-				<a href="https://github.com/ahsenkamal/motion-deblur-superresolution" target="_blank"><h1>Super Resolution</h1></a>
-            </div>
-        </div>
+		<div class="main">
+			<div id="iut-frame" class="left image-column">
+				<div id="iut-zoom" class="zoom-element">
+					<img id="iut" alt="IUT (Image Under Test)">
+				</div>
+			</div>
+
+			<div id="out-frame" class="middle image-column">
+				<div id="out-zoom" class="zoom-element">
+					<img id="out" alt="Recovered Image">
+				</div>
+			</div>
+			
+			<div class="right">
+				<div id="control-buttons-wrapper">
+					<button id="save-button"> Save </button>
+				</div>
+			</div>
+		</div>
+
 	</body>
 </html>

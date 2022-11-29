@@ -5,6 +5,7 @@ import dialogs
 import utils
 
 import motion_deblur
+import super_resolution
 
 IUT = None # Image Under Test
 
@@ -42,6 +43,16 @@ def do_motion_deblur(angle, strength, snr, iut_already_displayed):
   res_image_base64_str = utils.image_to_base64(res_image)
   eel.displayOUT(res_image_base64_str)
 
+@eel.expose
+def do_super_resolution():
+  image = IUT
+
+  img_base64_str = utils.image_to_base64(image)
+  eel.displayIUTforSuperResolution(img_base64_str)
+
+  res_image = super_resolution.super_resolve(image)
+  res_image_base64_str = utils.image_to_base64(res_image)
+  eel.displayOUTforSuperResolution(res_image_base64_str)
 
 def start():
   eel.start('index.html', size=(1024, 768), port=10123)

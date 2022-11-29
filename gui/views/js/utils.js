@@ -13,3 +13,7 @@ const submitIUTPath = async (image_path) => {
 const doMotionDeblur = async (angle=135, strength=22, snr=25, iut_already_displayed=false) => {
   return await eel.do_motion_deblur(angle, strength, snr, iut_already_displayed)();
 }
+
+const doSuperResolution = async () => {
+  return await eel.do_super_resolution()();
+}
