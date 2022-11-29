@@ -1,5 +1,7 @@
 Eel==0.12.4
+ISR==2.2.0
 matplotlib==3.4.2
 numpy==1.20.1
+opencv_python==4.6.0.66
 Pillow==9.3.0
 scipy==1.9.3
