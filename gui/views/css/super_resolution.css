@@ -24,10 +24,10 @@
             flex: 0 0 48%;
   }
   .middle {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 48%;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
   }
   .right {
     -webkit-box-flex: 0;
